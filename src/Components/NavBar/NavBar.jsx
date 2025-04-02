@@ -35,9 +35,9 @@ const NavBar = ({ onHeightChange}) => {
   useEffect(() => {
     if (navRef.current) {
       const height = navRef.current.getBoundingClientRect().height;
-      console.log("Altura del NavBar calculada:", height);
+      // console.log("Altura del NavBar calculada:", height);
       setNavHeight(height);
-      console.log("setNavHeight llamado con:", height);
+      // console.log("setNavHeight llamado con:", height);
       if (onHeightChange) {
         onHeightChange(height);
       }
@@ -50,7 +50,7 @@ const NavBar = ({ onHeightChange}) => {
   useEffect(() => {
     if (navHeight !== 0) {
       // Solo mostrar cuando navHeight tenga un valor real
-      console.log("Altura del NavBar actualizada:", navHeight);
+      // console.log("Altura del NavBar actualizada:", navHeight);
     }
   }, [navHeight]);
 
@@ -116,7 +116,7 @@ const NavBar = ({ onHeightChange}) => {
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out z-30 md:hidden`}
       >
-        <div className="p-4 bg-amber-400 h-full flex flex-col relative">
+        <div className="p-4 bg-gradient-to-b from-white to-blue-200 h-full flex flex-col relative">
           {/* Botón para cerrar */}
           <button
             className="text-2xl mb-4 absolute right-2 cursor-pointer"
