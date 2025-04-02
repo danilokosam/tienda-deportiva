@@ -2,10 +2,10 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className='bg-[url("/src/images/bg.png")] bg-cover bg-no-repeat text-white mt-6'>
+    <footer className='bg-[url("/src/assets/images/bg.png")] bg-cover bg-no-repeat text-white mt-6'>
       <div className="grid grid-cols-4 gap-x-8 justify-center items-center p-[70px] px-36">
         <div className="flex flex-col">
-          <img src="../src/images/logo.png" alt="" className="w-40" />
+          <img src="../src/assets/images/logo.png" alt="" className="w-40" />
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <div className="flex flex-col justify-evenly">
