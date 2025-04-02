@@ -7,7 +7,7 @@ import { SearchBar } from "./SearchBar";
 import { UserCarIcons } from "./UserCarIcons";
 import { NavLinksMobile } from "./NavLinksMobile";
 
-const NavBar = ({ onHeightChange}) => {
+const NavBar = ({ onHeightChange }) => {
   // Estado para manejar el sidebar en movil
   const [isOpen, setIsOpen] = useState(false);
 
@@ -72,7 +72,7 @@ const NavBar = ({ onHeightChange}) => {
     <>
       <nav
         ref={navRef}
-        className="w-full top-0 z-30 bg-white p-2 text-black flex items-center justify-between border-b border-black fixed"
+        className="w-full top-0 z-30 bg-white p-2 text-black flex items-center justify-between shadow-md shadow-blue-200 fixed"
       >
         {/* Logo */}
         <div className="flex-shrink-0 ml-2">
