@@ -4,15 +4,21 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { useRef, useState, useEffect } from "react";
 import { NavLinks } from "./NavLinks";
 import { SearchBar } from "./SearchBar";
-import { UserCartIcons } from "./UserCarIcons";
+import { UserCarIcons } from "./UserCarIcons";
 import { NavLinksMobile } from "./NavLinksMobile";
 
-const NavBar = () => {
+const NavBar = ({ onHeightChange}) => {
   // Estado para manejar el sidebar en movil
   const [isOpen, setIsOpen] = useState(false);
 
+  // Estado para la altura del NavBar
+  const [navHeight, setNavHeight] = useState(0);
+
   // Referencia al aside para detectar click fuera
   const sidebarRef = useRef(null);
+
+  // Referencia al van, para medir su altura
+  const navRef = useRef(null);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -24,6 +30,29 @@ const NavBar = () => {
       setIsOpen(false);
     }
   };
+
+  // Calculamos la altura del NavBar al montar el componente
+  useEffect(() => {
+    if (navRef.current) {
+      const height = navRef.current.getBoundingClientRect().height;
+      console.log("Altura del NavBar calculada:", height);
+      setNavHeight(height);
+      console.log("setNavHeight llamado con:", height);
+      if (onHeightChange) {
+        onHeightChange(height);
+      }
+    } else {
+      console.log("No se pudo obtener la altura del NavBar");
+    }
+  }, [onHeightChange]);
+
+  // Verificar cambios en navheight
+  useEffect(() => {
+    if (navHeight !== 0) {
+      // Solo mostrar cuando navHeight tenga un valor real
+      console.log("Altura del NavBar actualizada:", navHeight);
+    }
+  }, [navHeight]);
 
   // useEffect para agregar y limpiar el evento click
   useEffect(() => {
@@ -41,7 +70,10 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="bg-white/65 p-2 text-black flex items-center justify-between border-b border-black relative">
+      <nav
+        ref={navRef}
+        className="w-full top-0 z-30 bg-white p-2 text-black flex items-center justify-between border-b border-black fixed"
+      >
         {/* Logo */}
         <div className="flex-shrink-0 ml-2">
           <Link to="/">
@@ -60,7 +92,7 @@ const NavBar = () => {
 
         {/* Iconos de usuario y carrito ( Visible en escritorio ) */}
         <div className="hidden md:flex items-center space-x-4 mr-2">
-          <UserCartIcons />
+          <UserCarIcons />
         </div>
         {/* Iconos de usuario y carrito */}
 
@@ -99,14 +131,17 @@ const NavBar = () => {
           {/* Menú de navegación */}
 
           {/* Iconos de usuario y carrito */}
-          <UserCartIcons onIconClick={toggleSidebar} className="mt-6" />
+          <UserCarIcons onIconClick={toggleSidebar} className="mt-6" />
           {/* Iconos de usuario y carrito */}
         </div>
       </aside>
       {/* Sidebar (visible en móviles cuando isOpen es true) */}
 
       {/* Barra de búsqueda en móviles ( debajo del navbar ) */}
-      <SearchBar className="md:hidden p-2 bg-white/65 border-b border-black fixed w-full top-16 z-10" />
+      <SearchBar
+        style={{ top: `${navHeight}px` }}
+        className="md:hidden p-2 bg-white/65 border-b border-black fixed w-full top-16 z-10"
+      />
       {/* Barra de búsqueda en móviles ( debajo del navbar ) */}
     </>
   );
