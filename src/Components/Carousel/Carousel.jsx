@@ -33,6 +33,7 @@ export const Carousel = ({
           breakpoints={breakpoints}
           autoplay={autoplay}
           modules={[Autoplay]}
+          style={{padding: "10px"}}
         >
           {data.map((item, index) => (
             <SwiperSlide key={item.id || index}>

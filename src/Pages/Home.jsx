@@ -13,6 +13,7 @@ const Home = () => {
       {/* Carousel Productos */}
       <Carousel
       swiperClassName="px-4 md:px-8"
+      containerClassName="my-20 p-2"
         data={mockData}
         renderItem={(item) => (
           <CardItem
@@ -28,7 +29,7 @@ const Home = () => {
       {/* Carousel Productos */}
       {/* Carousel Moda */}
       <Carousel
-        containerClassName="my-20"
+        containerClassName="my-20 p-2"
         swiperClassName="px-4 md:px-8"
         title="Moda"
         linkText="Ver más"
@@ -52,7 +53,7 @@ const Home = () => {
             description={item.description}
             price={item.price}
             cartIcon={<FaCartShopping className="text-blue-600" />}
-            containerClassName="flex shadow-lg rounded-lg border border-gray-300 cursor-pointer"
+            containerClassName="flex shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg cursor-pointer"
             imageClassName="w-32 h-32 object-cover object-center rounded-l-lg"
             contentClassName="p-2 flex-grow flex flex-col justify-between"
             descriptionClassName="text-xs md:text-base text-gray-700"

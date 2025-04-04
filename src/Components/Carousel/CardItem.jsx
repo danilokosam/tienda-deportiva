@@ -6,7 +6,7 @@ export const CardItem = ({
   description,
   price,
   actionIcon = <FaCartShopping className="text-blue-600" />, // Icon or action element (e.g., cart icon)
-  containerClassName = "rounded-lg shadow-lg w-full flex flex-col cursor-pointer h-72 border border-gray-300",
+  containerClassName = "rounded-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] w-full flex flex-col cursor-pointer h-72 ",
   imageClassName = "w-full h-36 object-cover object-center rounded-t-lg",
   contentClassName = "p-2 flex-grow flex flex-col justify-around",
   titleClassName = "text-sm md:text-lg font-bold",
