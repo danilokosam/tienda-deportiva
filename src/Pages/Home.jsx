@@ -18,7 +18,7 @@ const Home = () => {
         renderItem={(item) => (
           <CardItem
             key={item.id}
-            imageUrl={item.imageUrl}
+            imageUrl={item.image}
             title={item.title}
             description={item.description}
             price={item.price}

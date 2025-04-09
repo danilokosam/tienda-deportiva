@@ -1,42 +1,96 @@
 [
     {
       "id": 1,
-      "imageUrl": "https://picsum.photos/id/237/200/300",
+      "image": {
+        "imageUrl" : [
+          "https://picsum.photos/id/237/200/300",
+          "https://picsum.photos/id/1084/200/300",
+          "https://picsum.photos/id/1025/200/300",
+          "https://picsum.photos/id/1074/200/300",
+          "https://picsum.photos/id/1069/200/300",
+          "https://picsum.photos/id/1024/200/300"
+        ]
+      },
       "title": "Producto 1",
       "description": "Descripción del producto 1",
       "price": "$19.99"
     },
     {
       "id": 2,
-      "imageUrl": "https://picsum.photos/id/1084/200/300",
+      "image": {
+        "imageUrl" : [
+          "https://picsum.photos/id/237/200/300",
+          "https://picsum.photos/id/1084/200/300",
+          "https://picsum.photos/id/1025/200/300",
+          "https://picsum.photos/id/1074/200/300",
+          "https://picsum.photos/id/1069/200/300",
+          "https://picsum.photos/id/1024/200/300"
+        ]
+      },
       "title": "Producto 2",
       "description": "Descripción del producto 2",
       "price": "$29.99"
     },
     {
       "id": 3,
-      "imageUrl": "https://picsum.photos/id/1025/200/300",
+      "image": {
+        "imageUrl" : [
+          "https://picsum.photos/id/237/200/300",
+          "https://picsum.photos/id/1084/200/300",
+          "https://picsum.photos/id/1025/200/300",
+          "https://picsum.photos/id/1074/200/300",
+          "https://picsum.photos/id/1069/200/300",
+          "https://picsum.photos/id/1024/200/300"
+        ]
+      },
       "title": "Producto 3",
       "description": "Descripción del producto 3",
       "price": "$39.99"
     },
     {
       "id": 4,
-      "imageUrl": "https://picsum.photos/id/1074/200/300",
+      "image": {
+        "imageUrl" : [
+          "https://picsum.photos/id/237/200/300",
+          "https://picsum.photos/id/1084/200/300",
+          "https://picsum.photos/id/1025/200/300",
+          "https://picsum.photos/id/1074/200/300",
+          "https://picsum.photos/id/1069/200/300",
+          "https://picsum.photos/id/1024/200/300"
+        ]
+      },
       "title": "Producto 4",
       "description": "Descripción del producto 4",
       "price": "$49.99"
     },
     {
       "id": 5,
-      "imageUrl": "https://picsum.photos/id/1069/200/300",
+      "image": {
+        "imageUrl" : [
+          "https://picsum.photos/id/237/200/300",
+          "https://picsum.photos/id/1084/200/300",
+          "https://picsum.photos/id/1025/200/300",
+          "https://picsum.photos/id/1074/200/300",
+          "https://picsum.photos/id/1069/200/300",
+          "https://picsum.photos/id/1024/200/300"
+        ]
+      },
       "title": "Producto 5",
       "description": "Descripción del producto 5",
       "price": "$59.99"
     },
     {
       "id": 6,
-      "imageUrl": "https://picsum.photos/id/1024/200/300",
+      "image": {
+        "imageUrl" : [
+          "https://picsum.photos/id/237/200/300",
+          "https://picsum.photos/id/1084/200/300",
+          "https://picsum.photos/id/1025/200/300",
+          "https://picsum.photos/id/1074/200/300",
+          "https://picsum.photos/id/1069/200/300",
+          "https://picsum.photos/id/1024/200/300"
+        ]
+      },
       "title": "Producto 6",
       "description": "Descripción del producto 6",
       "price": "$69.99"
