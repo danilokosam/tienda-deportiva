@@ -1,5 +1,13 @@
 import { FaCartShopping } from "react-icons/fa6";
 
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+
+
+
+
 export const CardItem = ({
   imageUrl,
   title,
@@ -19,11 +27,26 @@ export const CardItem = ({
   return (
     <div className={containerClassName} onClick={onClick}>
       {imageUrl && (
-        <img
-          src={imageUrl}
-          alt={title || "Card item"}
-          className={imageClassName}
-        />
+        <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
+        <SwiperSlide>
+          <img src={imageUrl} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={imageUrl} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={imageUrl} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={imageUrl} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={imageUrl} alt="" />
+        </SwiperSlide>
+        
+
+       
+      </Swiper>
       )}
       <div className={contentClassName}>
         {title && <h3 className={titleClassName}>{title}</h3>}
@@ -41,26 +64,3 @@ export const CardItem = ({
   );
 };
 
-/*
-Example usage prop renderFooter
-renderFooter={() => (
-  <button className="w-full bg-blue-600 text-white py-2 rounded-lg">
-    Register Now
-  </button>
-)}
-
-Example usage prop onClick
- onClick={() => navigate(`/product/123`)} // Navigate to product page on card click
-      renderFooter={({ price, actionIcon }) => (
-        <div className="flex justify-between items-center">
-          <p className="font-semibold text-black">{price}</p>
-          <button
-            onClick={(e) => {
-              e.stopPropagation(); // Prevent the card's onClick from firing
-              alert("Added to cart!");
-            }}
-            className="text-blue-600"
-          >
-            {actionIcon}
-          </button>
-*/
